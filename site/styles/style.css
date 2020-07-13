@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #222222;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+.container {
+    width: 1140px;
+    margin: auto;
+    /*background: #08cc0f;*/
+}
+
+.header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 165px;
+    line-height: 51px;
+    text-transform: uppercase;
+    background: url("../img/logo.png") no-repeat;
+    background-blend-mode: overlay;
+    font-size: 27px;
+    padding-left: 72px;
+}
+
+.logo span {
+    color: #f16d7f;
+    font-weight: 700;
+}
+
+.search {
+    height: 38px;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    border: 1px solid #e6e6e6;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.search__browse {
+    padding: 14px;
+    background-color: #f9f9f9;
+    line-height: 38px;
+    border: none;
+    color: #7c7c7c;
+    outline: none;
+
+}
+
+.search__browse i {
+    color: #838383;
+}
+
+.header .search input {
+    height: inherit;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    padding: 14px 16px;
+    border-left: 1px solid #e6e6e6;
+    border-right: 1px solid #e6e6e6;
+}
+
+
+
+.header .search button:last-child {
+    border: none;
+    outline: none;
+    height: inherit;
+    background: none;
+    padding: 12px;
+    color: #a4a4a4;
+}
+
+.header__cart {
+    margin-left: auto;
+    margin-right: 26px;
+}
+
+.header__account-bar {
+    border: none;
+    outline: none;
+    width: 130px;
+    line-height: 38px;
+    background-color: #f16d7f;
+    padding-left: 19px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.headerLine {
+    border-bottom: 1px solid #ececec;
+}
+
+
+
+.topNav {
+    height: 51px;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topNav a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #222222;
+}
+
+.topNav a:not(:last-child) {
+    margin-right: 46px;
+}
+
+.topBanner {
+    height: 614px;
+    background-color: #e8e8e8;
+}
+
+.topBannerContents {
+    height: 614px;
+    background: url(../img/topHeaderBack.png) no-repeat;
+    background-position: 100% -1%;
+    background-size: 550px;
+}
+
+.bannerText {
+    width: 512px;
+    height: 92;
+    display: flex;
+    padding-top: 224px;
+}
+
+.rectangle {
+    width: 12px;
+    height: 92px;
+    background-color: #f16d7f;
+    margin-right: 12px;
+}
+
+.slogan {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sloganTheBrand {
+    font-size: 60px;
+    line-height: 0.75;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.sloganOfLux {
+    font-size: 40px;
+    line-height: 0.8;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.sloganOfLux span {
+    color: #f16d7f;
+}
+
+.category {
+    height: 822px;
+    margin-top: 98px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.fullsize {
+    width: 560px;
+    height: 542px;
+}
+
+.halfsize {
+    width: 560px;
+    height: 261px;
+}
+
+.forMenImage {
+    position: relative;
+    background: url(../img/offer1.jpg);
+}
+
+.accesoriesImage {
+    position: relative;
+    background: url(../img/offer2.jpg);
+}
+
+.womenImage {
+    position: relative;
+    background: url(../img/offer3.jpg);
+}
+
+.kidsImage {
+    position: relative;
+    background: url(../img/offer4.jpg);    
+}
+
+.categoryText {
+    position: absolute;
+    top: 26px;
+    font-weight: 900;
+    font-size: 18px;
+    color: #222222;
+    text-transform: uppercase;
+    background-color: #ffffff;
+    padding: 16px 18px;
+
+}
+
+.categoryText span {
+    font-size: 30px;
+    color: #f16d7f;
+}
+
+.product {
+    height: 745px;
+}
+
+.product h1 {
+    font-size: 34px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+}
+
+.product p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #9f9f9f;
+    text-align: center;
+    margin: 0;
+}
+
+.products {
+    margin-top: 60px;
+    height: 775px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.products img {
+    width: 261px;
+    height: 280px;
+}
+
+.products a {
+    text-decoration: none;
+}
+
+.productName {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #222222;
+    padding: 16px;
+}
+.products span {
+    color: #f16d7f;   
+    font-size: 15px; 
+    margin-top: 18px;
+}
