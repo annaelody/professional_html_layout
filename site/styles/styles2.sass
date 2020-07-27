@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap')
+
+$mainColor: #f16d7f
+$mainColorHover: #ED5E71
+$mainColorActive: #CE5263
+$textColor: #222222
+$textColorSubcribe: #454547
+$textColorP: #9f9f9f
+$buttonTextColor: #ffffff
+
+
+@mixin buttonEffects
+  background-color: $mainColor
+  color: $buttonTextColor
+  &:hover
+    background-color: $mainColorHover
+  &:active
+    background-color: $mainColorActive
+
+@mixin logoBrand
+  width: 165px
+  line-height: 51px
+  text-transform: uppercase
+  background: url("../img/logo.png") no-repeat
+  background-blend-mode: overlay
+  font-size: 27px
+  padding-left: 72px
+  span
+    color: $mainColor
+    font-weight: 700
+
+@mixin textStyleCart
+  text-transform: uppercase
+  font-size: 13px
+  font-weight: 700
+@mixin buttonEffectsSecondColor
+  &:hover
+    background-color: #f5f3f3
+  &:active
+    background-color: #a2a2a2
+
+
+body
+  margin: 0
+  padding: 0
+  color: $textColor
+  font-family: 'Lato', sans-serif
+  font-weight: 300
+.container
+  width: 1140px
+  margin: auto
+
+.header
+  height: 100px
+  display: flex
+  align-items: center
+  .logo
+    @include logoBrand
+  .search
+    height: 38px
+    display: flex
+    align-items: center
+    border-radius: 3px
+    border: 1px solid #e6e6e6
+    overflow: hidden
+    font-size: 14px
+    .search__browse
+      padding: 14px
+      background-color: #f9f9f9
+      line-height: 38px
+      border: none
+      color: $textColor
+      outline: none
+      i
+        color: $textColorP
+    input
+      height: inherit
+      border: none
+      outline: none
+      overflow: hidden
+      padding: 14px 16px
+      border-left: 1px solid #e6e6e6
+      border-right: 1px solid #e6e6e6
+    button:last-child
+      border: none
+      outline: none
+      height: inherit
+      background: none
+      padding: 12px
+      color: $textColor
+  .header__cart
+    margin-left: auto
+    margin-right: 26px
+  .header__account-bar
+    border: none
+    outline: none
+    width: 130px
+    line-height: 38px
+    padding-left: 19px
+    font-size: 15px
+    font-weight: 400
+    @include buttonEffects
+
+.headerLine
+  border-bottom: 1px solid #ececec
+.topNav
+  height: 51px
+  font-weight: 700
+  font-size: 14px
+  display: flex
+  justify-content: center
+  align-items: center
+  a
+    text-transform: uppercase
+    text-decoration: none
+    color: $textColor
+    line-height: 50px
+    margin: -10px
+    &:not(:last-child)
+      margin-right: 46px
+    &:hover
+      color: #f16d7f
+      padding-top: 2px
+      border-bottom: 2px solid
+
+.topBanner
+  height: 614px
+  background-color: #e8e8e8
+  .topBannerContents
+    height: 614px
+    background: url(../img/topHeaderBack.png) no-repeat
+    background-position: 100% -1%
+    background-size: 550px
+    .bannerText
+      width: 512px
+      height: 92px
+      display: flex
+      padding-top: 224px
+      .rectangle
+        width: 12px
+        height: 92px
+        background-color: $mainColor
+        margin-right: 12px
+      .slogan
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        .sloganTheBrand
+          font-size: 60px
+          line-height: 0.75
+          font-weight: 900
+          text-transform: uppercase
+          margin: 0
+        .sloganOfLux
+          font-size: 40px
+          line-height: 0.8
+          font-weight: 900
+          text-transform: uppercase
+          margin: 0
+          span
+            color: $mainColor
+
+.newArrivalsFull
+  height: 148px
+  background: #f8f3f4
+  .newArrivals
+    height: inherit
+    display: flex
+    justify-content: space-between
+    align-items: center
+    text-transform: uppercase
+    h1
+      color: $mainColor
+      font-size: 24px
+      font-weight: 900
+    a
+      text-decoration: none
+      font-size: 14px
+      font-weight: 400
+      color: $textColor
+    a:last-child
+      color: $mainColor
+    a:hover
+      color: #ED5E71
+
+.shoppingCart
+  margin-top: 100px
+  .shoppingCartHeading
+    font-weight: 700
+    text-transform: uppercase
+    font-size: 13px
+    color: $textColor /* !important */
+  .productPrice
+    @include textStyleCart
+    width: 80px
+  .productQty
+    @include textStyleCart
+    width: 68px
+    input
+      width: 20px
+      border: 1px solid #eaeaea
+      text-align: center
+      height: 30px
+  .productShipping
+    @include textStyleCart
+    width: 62px
+  .productSubtotal
+    @include textStyleCart
+    width: 66px
+  .productAction
+    width: 50px
+
+  .shoppingCartString
+    display: flex
+    justify-content: space-between
+    padding-bottom: 30px
+    border-bottom: 1px solid #eaeaea
+    margin-top: 20px
+    color: #656565
+    > div:first-child
+      width: 460px
+    > div:not(:first-child)
+      display: flex
+      justify-content: center
+      align-items: center
+    .product
+      display: flex
+      img
+        margin-right: 20px
+      .productDetails
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        padding-top: 13px
+        padding-bottom: 22px
+        .productName
+          margin-top: 0
+          margin-bottom: auto
+          @include textStyleCart
+        .productColor, .productSize
+          font-weight: 300
+        .productParam
+          font-weight: 400
+
+.shoppingCartActions
+  display: flex
+  justify-content: space-between
+  margin-top: 44px
+  button
+    padding: 20px 40px
+    border: 1px solid #eaeaea
+    background-color: #ffffff
+    color: #4a4a4a
+    text-transform: uppercase
+    font-weight: 700
+    outline: none
+    @include buttonEffectsSecondColor
+.checkOutArea
+  display: flex
+  justify-content: space-between
+  margin-top: 63px
+  align-items: flex-start
+  .shippingAddressBlock
+    width: 355px
+    h2
+      margin-top: 0
+      margin-bottom: 22px
+      text-transform: uppercase
+      font-size: 16px
+    select, input
+      height: 45px
+      border: 1px solid #eaeaea
+      background-color: #ffffff
+      width: 100%
+      color: #b1b1b1
+      font-size: 13px
+      font-weight: 300
+      padding: 13px
+      font-family: inherit
+      outline: none
+      box-sizing: border-box
+      margin-bottom: 20px
+      input::-webkit-input-placeholder
+        /* Chrome/Opera/Safari */
+        color: #b1b1b1
+      input::-moz-placeholder
+        /* Firefox 19+ */
+        color: #b1b1b1
+      input:-ms-input-placeholder
+        /* IE 10+ */
+        color: #b1b1b1
+      input:-moz-placeholder
+        /* Firefox 18- */
+        color: #b1b1b1
+    button
+      padding: 12px 15px
+      border: 1px solid #eaeaea
+      background: white
+      font-family: inherit
+      text-transform: uppercase
+      color: #4a4a4a
+      font-weight: 700
+      font-size: 11px
+      outline: none
+      @include buttonEffectsSecondColor
+  .couponDiscountBlock
+    width: 355px
+    h2
+      margin-top: 0
+      margin-bottom: 22px
+      text-transform: uppercase
+      font-size: 16px
+    form
+      label
+        display: block
+        color: #000000
+        font-size: 14px
+        font-weight: 300
+        margin-bottom: 24px
+      input
+        height: 45px
+        border: 1px solid #eaeaea
+        background-color: #ffffff
+        width: 100%
+        color: #b1b1b1
+        font-size: 13px
+        font-weight: 300
+        padding: 13px
+        font-family: inherit
+        outline: none
+        box-sizing: border-box
+        margin-bottom: 25px
+      input::-webkit-input-placeholder
+        /* Chrome/Opera/Safari */
+        color: #b1b1b1
+      input::-moz-placeholder
+        /* Firefox 19+ */
+        color: #b1b1b1
+      input:-ms-input-placeholder
+        /* IE 10+ */
+        color: #b1b1b1
+      input:-moz-placeholder
+        /* Firefox 18- */
+        color: #b1b1b1
+      button
+        padding: 12px 15px
+        border: 1px solid #eaeaea
+        background: white
+        font-family: inherit
+        text-transform: uppercase
+        color: #4a4a4a
+        font-weight: 700
+        font-size: 11px
+        outline: none
+        @include buttonEffectsSecondColor
+
+  .grandTotalBlock
+    width: 360px
+    background-color: #f5f3f3
+    padding: 40px
+    box-sizing: border-box
+    .grandTotalSub
+      margin-bottom: 14px
+      color: #4a4a4a
+      font-size: 11px
+      font-weight: 400
+      text-transform: uppercase
+      text-align: right
+      span:last-child
+        margin-left: 15px
+    .grandTotalGrand
+      text-align: right
+      color: #222222
+      font-size: 16px
+      font-weight: 700
+      text-transform: uppercase
+      padding-bottom: 22px
+      border-bottom: 1px solid #e2e2e2
+      margin-bottom: 17px
+      span:last-child
+        color: #f16d7f
+        margin-left: 20px
+    button
+      width: 100%
+      background-color: #f16d7f
+      padding: 20px 38px
+      text-align: center
+      color: #fff
+      text-transform: uppercase
+      font-size: 16px
+      font-weight: 700
+      border: none
+      outline: none
+      @include buttonEffects
+.subscribeFull
+  height: 438px
+  margin-top: 97px
+  background: url(../img/Layer_41.jpg) no-repeat center bottom, #ccc
+  background-blend-mode: overlay
+  background-size: cover
+  .subscribe
+    display: flex
+    height: inherit
+    .subscribePhotoQuote
+      width: calc(100% - 1px)
+      display: flex
+      margin-top: 123px
+      .subscribePhoto
+        width: 83px
+        margin-right: 28px
+      .subscribeQuote
+        width: 386px
+        blockquote
+          margin: 0
+          font-size: 16px
+          font-style: italic
+          line-height: 26px
+          font-weight: 700
+          color: $textColorSubcribe
+        .subscribeAuthor
+          margin-top: 20px
+          font-size: 16px
+          font-weight: 900
+          color: $mainColor
+          span
+            font-size: 12px
+            font-weight: 700
+            color: $textColorSubcribe
+        .subscribeDash
+          width: 140px
+          display: flex
+          justify-content: space-between
+          margin-top: 40px
+          div
+            width: 38px
+            height: 4px
+            background-color: #d6d6d6
+            &:hover
+              background-color: $mainColor
+              cursor: pointer
+    .subscribeLine
+      width: 1px
+      background: #ffffff
+    .subscribeRight
+      width: calc(100% - 1px)
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      h2
+        font-size: 24px
+        text-transform: uppercase
+        color: $textColorSubcribe
+        margin: 0
+        font-weight: 400
+      p
+        margin: 5px 0 35px
+        color: $textColorSubcribe
+        font-size: 14px
+        font-weight: 400
+      .subscribeForm
+        height: 46px
+      input
+        height: inherit
+        width: 334px
+        border: none
+        outline: none
+        padding: 0 28px
+        font-weight: 700
+        background-color: #e1e1e1
+        border-top-left-radius: 23px
+        border-bottom-left-radius: 23px
+        float: left
+      button
+        border-top-right-radius: 23px
+        border-bottom-right-radius: 23px
+        border: none
+        height: inherit
+        padding: 0 20px
+        outline: none
+        cursor: pointer
+        @include buttonEffects
+footer
+  margin-top: 100px !important
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  .footerBrand
+    width: 427px
+    font-size: 14px
+    font-weight: 300
+    line-height: 24px
+    color: $textColorSubcribe
+    .logo
+      @include logoBrand
+    .footerBrandTextOne
+      margin: 30px 0
+  .footerColumn
+    padding-top: 15px
+    h2
+      margin: 0 0 30px
+      font-size: 18px
+      font-weight: 700
+      color: $mainColor
+    a
+      display: block
+      color: $textColorSubcribe
+      font-size: 16px
+      text-decoration: none
+      &:hover
+        color: $mainColor
+      &:not(:last-child)
+        margin-bottom: 25px
+.copyrights
+  height: 80px
+  background: #e6e6e6
+  .copyrightsWrap
+    margin-top: 100px
+    color: $textColorSubcribe
+    height: inherit
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .copyrightsRight
+      display: flex
+      width: 200px
+      justify-content: space-between
+      a
+        text-decoration: none
+        color: inherit
+      i
+        width: 32px
+        height: 32px
+        background: white
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        text-align: center
+        &:hover
+          color: white
+          background: $mainColor
