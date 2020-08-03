@@ -1,0 +1,148 @@
+.subscribeFull
+  height: 438px
+  margin-top: 97px
+  background: url(../img/Layer_41.jpg) no-repeat center bottom, #ccc
+  background-blend-mode: overlay
+  background-size: cover
+  .subscribe
+    display: flex
+    height: inherit
+    .subscribePhotoQuote
+      width: calc(100% - 1px)
+      display: flex
+      margin-top: 123px
+      .subscribePhoto
+        width: 83px
+        margin-right: 28px
+      .subscribeQuote
+        width: 386px
+        blockquote
+          margin: 0
+          font-size: 16px
+          font-style: italic
+          line-height: 26px
+          font-weight: 700
+          color: $textColorSubcribe
+        .subscribeAuthor
+          margin-top: 20px
+          font-size: 16px
+          font-weight: 900
+          color: $mainColor
+          span
+            font-size: 12px
+            font-weight: 700
+            color: $textColorSubcribe
+        .subscribeDash
+          width: 140px
+          display: flex
+          justify-content: space-between
+          margin-top: 40px
+          div
+            width: 38px
+            height: 4px
+            background-color: #d6d6d6
+            &:hover
+              background-color: $mainColor
+              cursor: pointer
+    .subscribeLine
+      width: 1px
+      background: #ffffff
+    .subscribeRight
+      width: calc(100% - 1px)
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      h2
+        font-size: 24px
+        text-transform: uppercase
+        color: $textColorSubcribe
+        margin: 0
+        font-weight: 400
+      p
+        margin: 5px 0 35px
+        color: $textColorSubcribe
+        font-size: 14px
+        font-weight: 400
+      .subscribeForm
+        height: 46px
+      input
+        height: inherit
+        width: 334px
+        border: none
+        outline: none
+        padding: 0 28px
+        font-weight: 700
+        background-color: #e1e1e1
+        border-top-left-radius: 23px
+        border-bottom-left-radius: 23px
+        float: left
+      button
+        border-top-right-radius: 23px
+        border-bottom-right-radius: 23px
+        border: none
+        height: inherit
+        padding: 0 20px
+        outline: none
+        cursor: pointer
+        @include buttonEffects
+footer
+  margin-top: 100px !important
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  .footerBrand
+    width: 427px
+    font-size: 14px
+    font-weight: 300
+    line-height: 24px
+    color: $textColorSubcribe
+    .logo
+      @include logoBrand
+    .footerBrandTextOne
+      margin: 30px 0
+  .footerColumn
+    padding-top: 15px
+    h2
+      margin: 0 0 30px
+      font-size: 18px
+      font-weight: 700
+      color: $mainColor
+    a
+      display: block
+      color: $textColorSubcribe
+      font-size: 16px
+      text-decoration: none
+      &:hover
+        color: $mainColor
+      &:not(:last-child)
+        margin-bottom: 25px
+.copyrights
+  height: 80px
+  background: #e6e6e6
+  .copyrightsWrap
+    margin-top: 100px
+    color: $textColorSubcribe
+    height: inherit
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .copyrightsRight
+      display: flex
+      width: 200px
+      justify-content: space-between
+      a
+        text-decoration: none
+        color: inherit
+      i
+        width: 32px
+        height: 32px
+        background: white
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        text-align: center
+        &:hover
+          color: white
+          background: $mainColor
