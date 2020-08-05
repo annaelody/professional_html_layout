@@ -1,0 +1,73 @@
+.header
+  height: 100px
+  display: flex
+  align-items: center
+  a
+    text-decoration: none
+    @include logoBrand
+  .search
+    height: 38px
+    display: flex
+    align-items: center
+    border-radius: 3px
+    border: 1px solid #e6e6e6
+    overflow: hidden
+    font-size: 14px
+    .search__browse
+      padding: 14px
+      background-color: #f9f9f9
+      line-height: 38px
+      border: none
+      color: $textColor
+      outline: none
+      i
+        color: $textColorP
+    input
+      height: inherit
+      border: none
+      outline: none
+      overflow: hidden
+      padding: 14px 16px
+      border-left: 1px solid #e6e6e6
+      border-right: 1px solid #e6e6e6
+    button:last-child
+      border: none
+      outline: none
+      height: inherit
+      background: none
+      padding: 12px
+      color: $textColor
+  .header__cart
+    margin-left: auto
+    margin-right: 26px
+  .header__account-bar
+    border: none
+    outline: none
+    width: 130px
+    line-height: 38px
+    padding-left: 19px
+    font-size: 15px
+    font-weight: 400
+    @include buttonEffects
+
+.headerLine
+  border-bottom: 1px solid #ececec
+.topNav
+  height: 51px
+  font-weight: 700
+  font-size: 14px
+  display: flex
+  justify-content: center
+  align-items: center
+  a
+    text-transform: uppercase
+    text-decoration: none
+    color: $textColor
+    line-height: 50px
+    margin: -10px
+    &:not(:last-child)
+      margin-right: 46px
+    &:hover
+      color: #f16d7f
+      padding-top: 2px
+      border-bottom: 2px solid

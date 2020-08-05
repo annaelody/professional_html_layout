@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap')
+@import '_mixin.sass', '_variables.sass', '_stylesHeader.sass', '_stylesFooter.sass'
+
+
+body
+  margin: 0
+  padding: 0
+  color: $textColor
+  font-family: 'Lato', sans-serif
+  font-weight: 300
+
+.container
+  width: 1140px
+  margin: auto
+
+.newArrivalsFull
+  height: 148px
+  background: #f8f3f4
+  .newArrivals
+    height: inherit
+    display: flex
+    justify-content: space-between
+    align-items: center
+    text-transform: uppercase
+    h1
+      color: $mainColor
+      font-size: 24px
+      font-weight: 900
+    a
+      text-decoration: none
+      font-size: 14px
+      font-weight: 400
+      color: $textColor
+    a:last-child
+      color: $mainColor
+    a:hover
+      color: #ED5E71
+
+.productPage
+  height: 1645px
+  display: flex
+  justify-content: space-between
+  padding-top: 65px
+  .sidebar
+    width: 245px
+    .sidebarBox
+      display: flex
+      flex-wrap: wrap
+      margin-bottom: 18px
+      .sidebarLine
+        width: 5px
+        height: 37px
+        background-color: #ef5b70
+      .sidebarCollapse
+        display: none
+      .sidebarCollapse+label+div
+        display: none
+      .sidebarCollapse+label
+        display: inline-block
+        cursor: pointer
+      .sidebarCollapse:checked+label
+        width: 93%
+        border-bottom: 1px solid #ebebeb
+      .sidebarCollapse:checked+label+div
+        display: flex
+        flex-direction: column
+      label
+        color: $mainColor
+        font-size: 14px
+        font-weight: 900
+        line-height: 20px
+        text-transform: uppercase
+        border-bottom: 1px solid #ebebeb
+        padding-top: 8px
+        padding-left: 10px
+        width: 93%
+      .sidebarCollapseBox
+        a
+          color: #6f6e6e
+          font-size: 14px
+          font-weight: 400
+          line-height: 33px
+          text-decoration: none
+          margin-left: 20px
+        a:first-child
+          margin-top: 10px
+  .productBox
+    width: 846px
+    .productBoxHeading
+      display: flex
+      h2
+        color: #6f6e6e
+        font-size: 14px
+        font-weight: 700
+        line-height: 20px
+        text-transform: uppercase
+        &:nth-child(1)
+          margin-right: 170px
+        &:nth-child(2)
+          margin-right: 266px
+    .filter
+      display: flex
+      width: inherit
+      height: 105px
+      margin-top: 10px
+      .trendingNowFilter
+        width: 168px
+        height: 38px
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-right: 110px
+        a
+          text-decoration: none
+          color: #6f6e6e
+          font-size: 14px
+          font-weight: 700
+          line-height: 26px
+          &:hover
+            color: $mainColor
+        span
+          color: #cacaca
+      .sizeFilter
+        display: flex
+        flex-wrap: wrap
+        width: 240px
+        height: 56px
+        span
+          color: #6f6e6e
+          font-size: 14px
+          font-weight: 700
+          line-height: 20px
+          text-transform: uppercase
+    .sortShowBackgraund
+      background-color: #f3f3f3
+      height: 50px
+      display: flex
+      align-items: center
+      .sortShow
+        display: flex
+        height: 28px
+        margin-left: 10px
+        div
+          height: 26px
+          border: 1px solid #efefef
+          border-right: none
+          color: #6f6e6e
+          font-size: 14px
+          font-weight: 400
+          line-height: 26px
+          text-align: center
+          background-color: #ffffff
+        .sortBox
+          width: 67px
+        .showBox
+          width: 57px
+          margin-left: 10px
+        select
+          height: inherit
+          border: 1px solid #efefef
+          color: #6f6e6e
+          font-size: 14px
+          font-weight: 400
+          line-height: 26px
+          text-align: center
+          outline: none
+        .sortSelect
+          width: 86px
+        .showSelect
+          width: 62px
+
+    .productView
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      align-content: space-between
+      margin-top: 7px
+      a
+        text-decoration: none
+        margin-top: 36px
+        .imgBack
+          background-color: #efefef
+          width: 261px
+          height: 280px
+          display: flex
+          justify-content: center
+          align-items: center
+        .productName
+          font-size: 14px
+          font-weight: 700
+          text-transform: uppercase
+          color: #222222
+          padding: 16px
+        span
+          color: #f16d7f
+          font-size: 15px
+          margin-top: 18px
+    .productBoxPaginationAll
+      display: flex
+      justify-content: space-between
+      height: 44px
+      margin-top: 45px
+      .productBoxPagination
+        width: 261px
+        height: inherit
+        border: 1px solid #efefef
+        display: flex
+        justify-content: space-around
+        align-items: center
+        a, span
+          text-decoration: none
+          color: #c4c4c4
+          font-size: 16px
+          line-height: 26px
+          font-weight: bold
+        a:nth-child(2), a:nth-child(10)
+          color: $mainColor
+        a:hover
+          color: #999595
+      .productBoxButton
+        width: 150px
+        height: inherit
+        color: #ef5b70
+        font-size: 16px
+        font-weight: bold
+        line-height: 26px
+        outline: none
+        border-radius: 3px
+        border: 1px solid #ef5b70
+        background-color: #ffffff
+        &:hover
+          background-color: #FEF5F6
+        &:active
+          background-color: #FDE7EA
+.featureBoxFull
+  width: 100%
+  height: 341px
+  background-color: #222224
+  .featureBox
+    display: flex
+    justify-content: space-around
+    align-items: center
+    height: inherit
+    div
+      width: 318px
+      height: 140px
+      display: block
+      text-align: center
+      h2
+        color: #fbfbfb
+        font-size: 20px
+        font-weight: 700
+        letter-spacing: 0.5px
+      p
+        color: #fbfbfb
+        font-size: 14px
+        font-weight: 300
+        line-height: 23.95px
+        letter-spacing: 0.35px
+      &:nth-child(1)
+        margin-top: 6px
+      &:nth-child(2)
+        margin-bottom: 10px
+

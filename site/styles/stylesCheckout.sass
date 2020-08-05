@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap')
+@import '_mixin.sass', '_variables.sass', '_stylesHeader.sass', '_stylesFooter.sass'
+
+
+body
+  margin: 0
+  padding: 0
+  color: $textColor
+  font-family: 'Lato', sans-serif
+  font-weight: 300
+
+.container
+  width: 1140px
+  margin: auto
+
+.newArrivalsFull
+  height: 148px
+  background: #f8f3f4
+  .newArrivals
+    height: inherit
+    display: flex
+    justify-content: space-between
+    align-items: center
+    text-transform: uppercase
+    h1
+      color: $mainColor
+      font-size: 24px
+      font-weight: 900
+    a
+      text-decoration: none
+      font-size: 14px
+      font-weight: 400
+      color: $textColor
+    a:last-child
+      color: $mainColor
+    a:hover
+      color: #ED5E71
+
+.checkout
+  margin-top: 60px
+  .collapse
+    display: none
+  .collapse+label+div
+    display: none
+  .collapse+label
+    display: inline-block
+    cursor: pointer
+  .collapse:checked+label
+    border-bottom: 0
+  .collapse:checked+label+div
+    display: flex
+  .collapseBox
+    border-bottom: 1px solid #e8e8e8
+    display: flex
+    .collapseLeftBox
+      margin-left: 35px
+      width: 300px
+      height: 460px
+      h2
+        color: #222222
+        font-size: 13px
+        font-weight: 700
+        text-transform: uppercase
+      p
+        color: #b3b2b2
+        font-size: 13px
+        font-weight: 400
+        line-height: 20px
+        margin-bottom: 30px
+      div
+        color: #222222
+        font-size: 12px
+        font-weight: 700
+        text-transform: uppercase
+        margin-bottom: 12px
+        input:checked+span
+          color: #222222
+      .collapseRadioRegister
+        margin-bottom: 30px
+      a
+        text-decoration: none
+        color: #b3b2b2
+        font-size: 13px
+        font-weight: 400
+        line-height: 20px
+      button
+        @include buttonEffectsSecondColor
+        width: 180px
+        height: 50px
+        border: 1px solid #eaeaea
+        background-color: #ffffff
+        outline: none
+        cursor: pointer
+        color: #4a4a4a
+        font-size: 14px
+        font-weight: 700
+        text-transform: uppercase
+        margin-top: 40px
+    .collapseRightBox
+      margin-left: 290px
+      width: 400px
+      height: 460px
+      h2
+        color: #222222
+        font-size: 13px
+        font-weight: 700
+        text-transform: uppercase
+        span
+          color: #ff0d0d
+      input
+        width: 390px
+        height: 45px
+        outline: none
+        border: 1px solid #eaeaea
+      .inputRequired
+        margin-bottom: 10px
+      p
+        color: #b3b2b2
+        font-size: 13px
+        font-weight: 400
+        line-height: 20px
+        margin-bottom: 25px
+      h3
+        color: #ff0d0d
+        font-size: 13px
+        font-weight: 700
+        line-height: 20px
+      div
+        display: flex
+        text-align: center
+        margin-top: 40px
+        button
+          @include buttonEffectsSecondColor
+          width: 180px
+          height: 50px
+          border: 1px solid #eaeaea
+          background-color: #ffffff
+          outline: none
+          cursor: pointer
+          color: #4a4a4a
+          font-size: 14px
+          font-weight: 700
+          text-transform: uppercase
+        h3
+          color: #222222
+          margin-left: 30px
+
+  label
+    width: 100%
+    color: #222222
+    font-size: 16px
+    font-weight: 900
+    text-transform: uppercase
+    padding-top: 25px
+    padding-bottom: 25px
+    border-bottom: 1px solid #e8e8e8
+
